@@ -1,0 +1,28 @@
+{% extends 'dummy.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+</head>
+{% block body_block %}
+<body>
+    <div class="mt-10">
+    <center>
+        <h1>Registration</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{EUMFDO.as_p}}
+            {{EPMFDO.as_p}}
+
+            <input type="submit" value="Register">
+        </form>
+    </center>
+</div>
+</body>
+{% endblock %}
+</html>

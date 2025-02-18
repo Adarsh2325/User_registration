@@ -1,0 +1,38 @@
+{% extends 'dummy.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>User Login</title>
+    {% endblock %}
+</head>
+{% block body_block %}
+<body>
+    <center>
+   <div class="mb-4 text-primary">
+    <h1>LOGIN PAGE</h1>
+   </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+        <label for="username">USERNAME</label>
+        <input type="text" name="username" id="username">
+    </div>
+        <br>
+        <div>
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password">
+    </div>
+        <br>
+        <div class="form-check">
+        <input type="submit" value="Login">
+    </div>
+    </form>
+    </center>
+</body>
+{% endblock %}
+</html>
