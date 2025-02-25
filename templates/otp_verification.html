@@ -1,0 +1,29 @@
+{% extends 'dummy.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+{% block body_block %}
+<body>
+    <center>
+      <div>
+        <form method="POST">
+        {% csrf_token %}
+        <label for="otp">Enter OTP :</label>
+        <input type="text" name="otp" id="otp">
+        <br><br>
+        <input type="submit" value="Verify Otp">
+
+        </form>
+      </div>
+    </center>
+</body>
+{% endblock %}
+</html>

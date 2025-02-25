@@ -1,5 +1,5 @@
 """
-URL configuration for UserReg project.
+URL configuration for regi project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -20,19 +20,6 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from app.views import *
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('registration/',registration,name='registration'),
-    path('home/',home,name='home'),
-    path('user_login/',user_login,name='user_login'),
-    path('user_logout/',user_logout,name='user_logout'),
-    path('profile_display/',profile_display,name='profile_display'),
-    path('change_password/',change_password,name='change_password'),
-    path('forgot_password/',forgot_password,name='forgot_password'),
-    path('otp_verification/',otp_verification,name='otp_verification'),
-    path('reset_pssd/',reset_pssd,name='reset_pssd'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-
-
